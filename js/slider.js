@@ -1,4 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1, // По умолчанию 1 видео
   spaceBetween: 30,
   centeredSlides: true,
   initialSlide: 1,
@@ -14,4 +15,10 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    1280: { 
+      slidesPerView: 2,
+      centeredSlides: false, 
+    }
+  }
 });

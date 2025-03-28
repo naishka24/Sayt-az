@@ -1429,11 +1429,6 @@
       width: 130px;
     }
   }
-  .xs\:w-\[138px\] {
-    @media (width >= 340px) {
-      width: 138px;
-    }
-  }
   .xs\:w-\[242px\] {
     @media (width >= 340px) {
       width: 242px;
