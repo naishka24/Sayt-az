@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="src/font.css" />
+  <link rel="stylesheet" href="src/input.css" />
+  <link rel="stylesheet" href="src/output.css" />
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Veb saytların hazırlanması, Domain, Hosting satışı</title>
+</head>
+<body>
+    <header class="bg-white flex justify-between items-center p-[24px] gap-[20px] sticky top-0 z-[1000]">
+      <a href="/index.html"><img class="min-w-[50px] w-[111px]" src="icon/saytaz.svg" alt="Sayt.az" /></a>
+      <menu class="hidden m:flex justify-around gap-[20px]">
+
+        <li onclick="navbarOpen('veb')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Veb sayt <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+        <div id="veb" class="scrollbar hidden min-w-[350px] h-[470px] overflow-y-scroll absolute top-17 left-20 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+            <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/website-program.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Saytların hazırlanması</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Veb saytların hazırlanması</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb2.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hökumət və qeyri-kommersiya saytları</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Hökumət və qeyri-kommersiya saytları</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb3.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Kiçik biznes saytları</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Kiçik bizneslər üçün saytlar</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb4.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">E-ticarət saytları</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">E-ticarət saytları</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb5.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hüquq firma saytı</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Hüquq firma saytı</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb6.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloqlar və Şəxsi Vebsayt</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Bloqlar və Şəxsi Vebsayt</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb7.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Daşınmaz əmlak veb saytı</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Daşınmaz əmlak veb saytı</p>
+            </div>
+
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb8.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Tibb - Doktor Saytlar</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Tibb Doktor Saytlar</p>
+            </div>
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb9.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">WordPress Saytları</p>
+              <p class="text-[14px] text-[rgb(100,116,139)] font-[600]">WordPress Saytları</p>
+            </div>
+
+        </div>
+
+        <li onclick="navbarOpen('domen')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Domen <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+        <div id="domen" class="scrollbar hidden min-w-[350px] overflow-y-scroll absolute top-17 left-70 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+          <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/network-browser.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Domen</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Etibarlı xidmət</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/network-www.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Pulsuz Domen Qeydiyyatı</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Sürətli qeydiyyat</p>
+          </div>
+
+        </div>
+
+        <li onclick="navbarOpen('host')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Hostinq <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+        <div id="host" class="scrollbar hidden min-w-[350px] overflow-y-scroll absolute top-17 left-90 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+          <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/hosting-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Veb Hostinq</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">₼10.00/ay-dan başlayaraq</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/vps-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">VPS</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">₼15.00/ay-dan başlayaraq</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/server-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Server</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">99.00/ay-dan başlayaraq</p>
+          </div>
+
+        </div>
+
+        <li onclick="navbarOpen('xidmet')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Xidmətlər <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+        <div id="xidmet" class="scrollbar hidden min-w-[350px] overflow-y-scroll absolute top-17 left-120 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+          <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/order-track.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Vebsayt sifarişinizi izləyin</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Sifarişinizi asanlıqla izləyin</p>
+          </div>
+          <a href="/pages/calc.html">
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/calculator.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sayt Kalkulyatoru</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Saytın Qiymətini Öyrən</p>
+          </div>
+          </a>
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/seo.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">SEO Xidməti</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Axtarış Sistemi Optimizasiyası</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/mobil.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Mobil Tətbiqlərin Hazırlanmasıi</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Mobil tətbiq xidməti</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/xidmet.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Texniki Xidmət</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Texniki Xidmət</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/sosial.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sosial Media Marketinq</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Sosial Media Marketinq</p>
+          </div>
+
+        </div>
+
+        <li onclick="navbarOpen('sirket')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Şirkət <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+        <div id="sirket" class="scrollbar hidden min-w-[350px] h-[470px] overflow-y-scroll absolute top-17 left-125 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+          <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/haqqimizda.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Haqqımızda</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Bizim komanda üzvlərimiz</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/blog-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloq</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Ən son xəbərlər və faydalı məlumatlar</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/startuplar.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bütün StartUplar</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Startupları idarə edən komandamıza qoşulun</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/portfolio-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Portfolio</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Hazırladığımız hər bir iş bizim üçün dəyərlidir</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/career-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Karyera</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Hazırkı vakansiyalarımız</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/freelans.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Freelance</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Sizdə qeydiyyatdan keçməklə freelance işləyə bilərsiz</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/contact-icon.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Əlaqə Forması</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Əlaqə Saxlayın</p>
+          </div>
+
+        </div>
+
+      </menu>
+      <div class="flex items-center justify-between gap-[15px] cursor-pointer py-[2px]">
+        <div onclick="valyutaniDiliSec('valyuta')" class="hoveredbar relative flex items-center gap-[12px]">
+          <p class="text-[22px] text-[#300c60]">₼</p>
+          <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc]"></i>
+          <div id="valyutalar" class="hidden absolute top-8"> 
+            <ul>
+              <li id="dollar" onclick="chooseCurrency(event, 'dollar')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] w-[60px] h-[35px] px-[25px] py-[5px] text-[#300c60]">$</li>
+              <li id="manat" onclick="chooseCurrency(event, 'manat')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0] w-[60px] h-[35px] px-[25px] py-[5px] text-[#300c60] bg-[#e4d6fa]">₼</li>
+            </ul>
+          </div>
+        </div>
+        <div onclick="valyutaniDiliSec('dil')" class="hoveredbar relative flex items-center gap-[12px]">
+          <img class="w-[20px]" src="icon/az.png" alt="azerb" /> 
+          <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc] hover:text-[#797979] duration-[.2s]"></i>
+          <div id="flags" class="hidden absolute top-8"> 
+            <ul >
+              <li id="azer" onclick="chooseLang(event, 'azer')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] w-[60px] h-[35px] text-center  px-[20px] py-[10px] text-[#300c60] "><img class="w-[20px]" src="icon/usa-flag.jpg.webp" alt="usa" /></li>
+              <li id="usa" onclick="chooseLang(event, 'usa')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0]  w-[60px] h-[35px]  text-center px-[20px] py-[5px] text-[#300c60] bg-[#e4d6fa]"><img class="w-[20px]" src="icon/az.png" alt="azerb" /></li>
+            </ul>
+          </div>
+        </div>
+        <div onclick="sidebarOpen()"><i class="fa-solid fa-bars text-[18px] pl-[5px]"></i></div>
+        <div class="hidden xl:flex flex-row gap-[1rem]">
+          <button class="w-[175px]  p-[10px] rounded-[8px] font-[500] cursor-pointer text-white bg-linear-to-r from-[#732ae4] to-[#e4b1ca]">Qiymət Təklifi Al</button>
+          <button class="w-[120px] p-[10px] rounded-[8px] font-[500] cursor-pointer text-[#a271f1] border-[1px] border-[#a271f1]">Daxil olun</button>
+        </div>
+      </div>
+
+        <div id="sidebar" class="hidden bg-white max-w-[400px] w-[100%] absolute top-0 right-0 bottom-0 border-[1px] border-[#e0e0e0] p-[24px] h-[100vh] z-[99999]">
+          <i onclick="xmark()" class="fa-solid fa-xmark text-[1.5em] absolute right-2 top-2 p-[10px]"></i>
+          <menu class="flex flex-col justify-around gap-[20px] my-[24px] px-[20px] m:hidden">
+
+            <li onclick="navbarOpen('vebSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Veb sayt <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+            <div id="vebSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] h-[470px] overflow-y-scroll absolute top-20 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+    
+                <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/website-program.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Saytların hazırlanması</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Veb saytların hazırlanması</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb2.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hökumət və qeyri-kommersiya saytları</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Hökumət və qeyri-kommersiya saytları</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb3.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Kiçik biznes saytları</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Kiçik bizneslər üçün saytlar</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb4.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">E-ticarət saytları</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">E-ticarət saytları</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb5.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hüquq firma saytı</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Hüquq firma saytı</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb6.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloqlar və Şəxsi Vebsayt</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Bloqlar və Şəxsi Vebsayt</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb7.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Daşınmaz əmlak veb saytı</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Daşınmaz əmlak veb saytı</p>
+                </div>
+    
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb8.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Tibb - Doktor Saytlar</p>
+                  <p class="text-[14px] text-[#64748B] font-[600]">Tibb Doktor Saytlar</p>
+                </div>
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                  <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/veb9.svg" alt="" /></div>
+                  <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">WordPress Saytları</p>
+                  <p class="text-[14px] text-[rgb(100,116,139)] font-[600]">WordPress Saytları</p>
+                </div>
+    
+            </div>
+    
+            <li onclick="navbarOpen('domenSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Domen <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+            <div id="domenSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] overflow-y-scroll absolute top-32 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+    
+              <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/network-browser.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Domen</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Etibarlı xidmət</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/network-www.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Pulsuz Domen Qeydiyyatı</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Sürətli qeydiyyat</p>
+              </div>
+    
+            </div>
+    
+            <li onclick="navbarOpen('hostSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Hostinq <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+            <div id="hostSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] overflow-y-scroll absolute top-43 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+    
+              <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/hosting-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Veb Hostinq</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">₼10.00/ay-dan başlayaraq</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/vps-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">VPS</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">₼15.00/ay-dan başlayaraq</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/server-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Server</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">99.00/ay-dan başlayaraq</p>
+              </div>
+    
+            </div>
+    
+            <li onclick="navbarOpen('xidmetSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Xidmətlər <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+            <div id="xidmetSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] overflow-y-scroll absolute top-55 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+              
+            
+              <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/order-track.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Vebsayt sifarişinizi izləyin</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Sifarişinizi asanlıqla izləyin</p>
+              </div>
+              
+              <a href="/pages/calc.html">
+                <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/calculator.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sayt Kalkulyatoru</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Saytın Qiymətini Öyrən</p>
+              </div>
+            </a>
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/seo.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">SEO Xidməti</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Axtarış Sistemi Optimizasiyası</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/mobil.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Mobil Tətbiqlərin Hazırlanmasıi</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Mobil tətbiq xidməti</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/xidmet.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Texniki Xidmət</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Texniki Xidmət</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/sosial.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sosial Media Marketinq</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Sosial Media Marketinq</p>
+              </div>
+    
+            </div>
+    
+            <li onclick="navbarOpen('sirketSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Şirkət <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+            <div id="sirketSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] h-[470px] overflow-y-scroll absolute top-65 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+    
+              <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/haqqimizda.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Haqqımızda</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Bizim komanda üzvlərimiz</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/blog-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloq</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Ən son xəbərlər və faydalı məlumatlar</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/startuplar.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bütün StartUplar</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Startupları idarə edən komandamıza qoşulun</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/portfolio-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Portfolio</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Hazırladığımız hər bir iş bizim üçün dəyərlidir</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/career-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Karyera</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Hazırkı vakansiyalarımız</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/freelans.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Freelance</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Sizdə qeydiyyatdan keçməklə freelance işləyə bilərsiz</p>
+              </div>
+    
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="icon/contact-icon.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Əlaqə Forması</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Əlaqə Saxlayın</p>
+              </div>
+    
+            </div>
+    
+          </menu>
+          <div class="flex py-[20px] px-[10px] gap-[30px]">
+            <div onclick="valyutaniDiliSec('valyuta2')" class="hoveredbar relative flex items-center gap-[12px]">
+              <p class="text-[22px] text-[#300c60]">₼</p>
+              <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc]"></i>
+              <div id="valyutalar2" class="hidden absolute top-8 right-[-15px] bg-white">
+                <ul class="h-[40px]">
+                  <li id="dollar1" onclick="chooseCurrency(event, 'dollar1')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] px-[25px] py-[5px] text-[#300c60] ">$</li>
+                  <li id="manat1" onclick="chooseCurrency(event, 'manat1')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0] px-[25px] py-[5px] text-[#300c60] bg-[#e4d6fa]">₼</li>
+                </ul>
+              </div>
+            </div>
+            <div onclick="valyutaniDiliSec('dil2')" class="hoveredbar relative flex items-center gap-[12px]">
+              <img class="w-[20px]" src="icon/az.png" alt="azerb" /> 
+              <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc] hover:text-[#797979] duration-[.2s]"></i>
+              <div id="flags2" class="hidden absolute top-8 right-[-15px] bg-white"> 
+                <ul class="h-[40px]">
+                  <li id="azer1" onclick="chooseLang(event, 'azer1')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] px-[22px] py-[10px] text-[#300c60] "><img class="w-[30px]" src="icon/usa-flag.jpg.webp" alt="usa" /></li>
+                  <li id="usa1" onclick="chooseLang(event, 'usa1')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0] px-[22px] py-[5px] text-[#300c60] bg-[#e4d6fa]"><img class="w-[30px]" src="icon/az.png" alt="azerb" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="max-w-[350px] w-[100%] p-[10px] rounded-[8px] font-[500] cursor-pointer text-white mb-[10px] bg-linear-to-r from-[#732ae4] to-[#e4b1ca]">Qiymət Təklifi Al</button>
+          <button class="max-w-[350px] w-[100%] p-[10px] rounded-[8px] font-[500] cursor-pointer text-[#a271f1] mt-[10px] border-[1px] border-[#a271f1]">Daxil olun</button>
+        </div>
+    </header>
+    <div class="h-[90vh]">
+      <div class="max-h-[80vh] h-[100%] m:max-w-[750px] m-auto flex items-center justify-center flex-col text-center">
+      <h1 class="text-[14px] xs:text-[24px] xs:px-[16px] s:text-[32px] m:text-[48px] m:px-[16px]  mb-[32px] whitespace-wrap">Biznesinizi bizimlə rəqəmsal dünyada   
+        <span class="text-[#4275ee] relative whitespace-nowrap"> daha asan <br>
+          <span id="circle" class="absolute hidden xs:w-[130px] xs:bottom-7 xs:left-[-8px] s:w-[181px] s:bottom-10 s:left-[-10px] m:w-[250px] m:bottom-15 m:right-33">
+            <img src="icon/easier.svg" alt="" /> 
+          </span> <p class="text-black"> yoldan irəliyə apar!</p> 
+        </span> 
+      </h1>
+      <h3 class="text-[#64758b] text-[14px] xs:text-[16px] m:text-[20px] m:px-[140px] m:leading-6 mb-[48px] leading-10 px-[10px] font-light">Mütəxəssislərdən ibarət komandamız sizə müştəri dəstəyi və texniki yardım göstərmək üçün 24/7 hazırdır.</h3>
+      <button class="text-[#4275ee] px-[32px] py-[12px] border-3 rounded-[8px] border-[#a271f1] cursor-pointer">Sayt Sifariş Et</button>
+      <a onclick="gonder()">
+        <div class="absolute bottom-10 text-center cursor-pointer">
+          <img src="icon/check.svg" alt="" />
+          <div id="circle2" class="absolute top-2 left-2">
+            <img src="icon/circle.svg" alt="" />
+          </div>
+        </div>
+      </a>
+    </div>
+    </div>
+  <main>
+    <section id="vebsayt" class="sm:flex sm: flex-row sm:mx-[45px] sm:my-[80px]">
+      <div class="sm:w-[50%]">
+        <div id="percent" class="hidden 2xs:flex flex-row gap-3 w-[100%] p-[16px] mt-[16px]">
+          <div class="w-[33%] sm:max-w-[195px] h-[280px] p-[24px] flex flex-col items-center gap-3 text-center shadow-[0px_4px_10px_0px_rgba(0,0,0,0.2)] rounded-[12px]">
+            <p class="text-[14px] text-[#6b7280]">Tamamlandı</p>
+            <svg width="110" height="110" viewBox="-13.75 -13.75 137.5 137.5" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              <circle r="45" cx="55" cy="55" fill="transparent" stroke="#fff" stroke-width="110"></circle>
+              <circle r="45" cx="55" cy="55" stroke="#21bfa5" stroke-width="6" stroke-linecap="round" stroke-dashoffset="0px" fill="transparent" stroke-dasharray="282.6px"></circle>
+              <text x="31px" y="61px" fill="#000" font-size="20px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -106px)">100%</text>
+            </svg>
+            <p class="text-[14px] font-bold">Sabina G.</p>
+            <p class="text-[14px] text-[#6b7280]">Designer</p>
+          </div>
+  
+          <div class="w-[33%] sm:max-w-[195px] h-[280px] p-[24px] flex flex-col items-center gap-3 text-center shadow-[0px_4px_10px_0px_rgba(0,0,0,0.2)] rounded-[12px]">
+            <p class="text-[14px] text-[#6b7280]">Icradadır</p>
+            <svg width="110" height="110" viewBox="-13.75 -13.75 137.5 137.5" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              <circle r="45" cx="55" cy="55" fill="transparent" stroke="#fff" stroke-width="110"></circle>
+              <circle r="45" cx="55" cy="55" stroke="#fc5185" stroke-width="6" stroke-linecap="round" stroke-dashoffset="28px" fill="transparent" stroke-dasharray="282.6px"></circle>
+              <text x="36px" y="61px" fill="#000" font-size="20px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -106px)">90%</text>
+            </svg>
+            <p class="text-[14px] font-bold">Fuad M.</p>
+            <p class="text-[14px] text-[#6b7280]">Frontend Developer</p>
+          </div>
+  
+          <div class="w-[33%] sm:max-w-[195px] h-[280px] p-[24px] flex flex-col items-center gap-3 text-center shadow-[0px_4px_10px_0px_rgba(0,0,0,0.2)] rounded-[12px]">
+            <p class="text-[14px] text-[#6b7280]">Icradadır</p>
+            <svg width="110" height="110" viewBox="-13.75 -13.75 137.5 137.5" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+              <circle r="45" cx="55" cy="55" fill="transparent" stroke="#fff" stroke-width="110"></circle>
+              <circle r="45" cx="55" cy="55" stroke="#fc5185" stroke-width="6" stroke-linecap="round" stroke-dashoffset="99px" fill="transparent" stroke-dasharray="282.6px"></circle>
+              <text x="36px" y="61px" fill="#000" font-size="20px" font-weight="bold" style="transform:rotate(90deg) translate(0px, -106px)">65%</text>
+            </svg>
+            <p class="text-[14px] font-bold">Ahmad R.</p>
+            <p class="text-[14px] text-[#6b7280]">Backend Developer</p>
+          </div>
+        </div>
+
+        <div class="hidden 2xs:flex justify-center">
+          <p class="w-[32px] h-[32px] rounded-[50%] bg-[#a271f1] flex items-center justify-center relative">
+            <i class="fa-solid fa-check text-white"></i>
+            <span class="absolute top-10 text-[#6b7280] font-[500] whitespace-nowrap">Web Design</span>
+          </p>
+          <hr class="w-[30%] border-[1px] text-[#a271f1] mt-[13px]"/>
+          <p class="w-[32px] h-[32px] border-[2px] rounded-[50%] border-[#a271f1] text-[#a271f1] relative">
+            <span class="absolute top-[-72px] left-[5px] text-[80px]">.</span>
+            <span class="absolute top-10 left-[-20px] text-[#6b7280] font-[500] whitespace-nowrap">Back-end</span>
+          </p>
+          <hr class="w-[30%] border-[1px] text-[#d1d5db] mt-[13px]"/>
+          <p class="w-[32px] h-[32px] border-[2px] rounded-[50%] border-[#d1d5db] relative">
+            <span class="absolute top-10 left-[-20px] text-[#6b7280] font-[500] whitespace-nowrap">Front-end</span>
+          </p>
+        </div>
+
+      </div>
+      <div class="px-[32px] py-[40px] text-center flex flex-col justify-center gap-[16px] sm:w-[50%]">
+        <h2 class="text-[25px] font-[600] max-w-[280px] w-[100%] m-auto my-[40px]">Vebsayt sifarişinizi izləyin</h2>
+        <input  class="w-[100%] sm:max-w-[404px] m-auto h-[52px] border-[1px] rounded-[12px] border-[#676767] text-center font-[600]" type="text" placeholder="Sifariş kodu" />
+        <button class="w-[100%] sm:max-w-[404px] m-auto h-[52px] border-[1px] rounded-[12px] text-white bg-[#a271f1] drop-shadow-lg hover:bg-[#7d3be2]">İzlə</button>
+        <p class="text-[12px] text-[#6b7280] mt-[20px] font-light">Sayt.az ilə sifarişlərinizə hər zaman nəzarət edin</p>
+      </div>
+    </section>
+    <section id="domen" class="bg-[#faf4ff] text-center py-[80px]">
+      <div class="flex flex-col justify-center items-center gap-2 px-[8px] max-w-[650px] m-auto">
+        <h2 class="text-[#300B60] font-medium xs:text-[22px] s:text-[32px]">Domen Adını Axtarın</h2>
+      <p class="text-[#300B60] text-[20px] xs:text-[16px] s:font-light">.az domain sifariş etməmişdən öncə 
+        <span class="font-bold"> whois.az </span>
+        saytında yoxlayın
+      </p>
+      <p class="text-[#300B60] text-[20px] font-medium xs:text-[16px] s:font-light">Sayt.az-da .az domenləri yalnız aktiv hosting planı olan müştərilər üçün əlçatandır. Davam etməzdən əvvəl bizdən hosting aldığınıza əmin olun.
+      <span class="cursor-pointer ml-1 font-bold text-[#300B60] text-[20px] xs:text-[16px]"> Ətraflı oxu...</span></p>
+      </div>
+      <div class="flex items-center justify-center mx-[8px] my-[15px]">
+        <input class="bg-white border-[#DADCE0] max-w-[350px] s:max-w-[450px] w-[100%] px-[12px] border-[1px] h-[48px] rounded-l-[8px]" type="text" placeholder=" İstədiyiniz domen adını daxil edin" /> 
+        <select id="selectDomen" class="bg-white border-[#DADCE0] border-y-[1px] h-[48px] px-[8px] s:w-[120px] text-[#64748b]">
+          <option>.az</option>
+        </select>
+        <button class="w-[100px] h-[48px] px-[24px] text-white bg-[#a271f1] hover:bg-[#7d3be2] rounded-[5px]">Axtar</button>
+      </div>
+      <div class="flex justify-center flex-col gap-[24px] py-[10px] max-w-[700px] w-[100%] m-auto xs:flex-row xs:flex-wrap">
+        <ul class="text-[#a271f1] xs:w-[28%] s:w-[13%]">
+          <li class="text-[24px] font-semibold">.az</li>
+          <li class="font-semibold">₼40/il</li>
+        </ul>
+        <ul class="text-[#a271f1] xs:w-[28%] s:w-[13%]">
+          <li class="text-[24px] font-semibold">.com</li>
+          <li class="font-semibold">₼25/il</li>
+        </ul>
+        <ul class="text-[#a271f1] xs:w-[28%] s:w-[13%]">
+          <li class="text-[24px] font-semibold">.net</li>
+          <li class="font-semibold">₼38/il</li>
+        </ul>
+        <ul class="text-[#a271f1] xs:w-[28%] s:w-[13%]">
+          <li class="text-[24px] font-semibold">.info</li>
+          <li class="font-semibold">₼55/il</li>
+        </ul>
+        <ul class="text-[#a271f1] xs:w-[28%] s:w-[13%]">
+          <li class="text-[24px] font-semibold">.biz</li>
+          <li class="font-semibold">₼30/il</li>
+        </ul>
+        <ul class="text-[#a271f1] xs:w-[28%] s:w-[13%]">
+          <li class="text-[24px] font-semibold">.org</li>
+          <li class="font-semibold">₼35/il</li>
+        </ul>
+      </div>
+    </section>
+    <section id="planlar" class=" py-[64px]">
+      <div class="w-[90%] flex flex-col s:flex-row s:px-[48px]">
+        <div class="flex flex-col items-start gap-[24px] px-[10px]">
+          <h2 class="text-[20px] text-[#300b60] font-medium xs:text-[30px] xs:font-bold s:text-[40px]">Hostinq Planınızı Seçin</h2>
+          <p class="text-[#4a2182] xs:text-[20px]">Yaxşı Bir Başlanğıc Təhlükəsiz və Güclü Hostinq Tələb Edir</p>
+        </div>
+        <div class="flex justify-center items-center border-[1px] border-[#cbd5e1] rounded-[24px] w-[162px] xs:w-[242px] mt-[40px] m-auto">
+          <div id="ayliq" onclick="changePlans('ayliq')" class="w-[50%] px-[16px] py-[12px] rounded-[24px] bg-[#a271f1] text-[#fff] text-center cursor-pointer duration-300">Aylıq</div>
+          <div id="illik" onclick="changePlans('illik')" class="w-[50%] px-[16px] py-[12px] rounded-[24px] bg-white text-[#94a3b8] text-center cursor-pointer duration-300">İllik</div>
+        </div>
+      </div>
+        <div class="flex flex-col items-center 2xs:flex-row 2xs:flex-wrap sm:m-[40px]">
+          <article onclick="planiSec(this)" class="bg-[#fafbff] w-[100%] shadow-xl 2xs:w-[44%] sm:w-[33%] sm:m-0 h-[662px] m-[16px] p-[24px] flex flex-col rounded-xl border-2 border-[#fafbff] hover:!border-[#9228e4] duration-200">
+            <h3  class="py-[8px] px-[4px] text-[24px] text-[#300b60] font-bold xs:text-[36px]">₼<span class="qiymet">5</span><sub class="sub ml-[8px] text-[14px] font-semibold">/ay</sub></h3>
+            <div class="bg-white py-[12px] px-[8px] text-[#300b60]">
+              <h5 class="text-[18px] font-bold mb-[30px] xs:text-[24px]">Ekonomik</h5>
+              <ul>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">1</b> Domen</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">3 GB</b> Disk Həcmi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">3</b> E-mail Hesabı</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Premium müştəri dəstəyi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>SSL Təhlükəsizliyi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Yedəkləmə və bərpa</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">Limitsiz</b> Trafik</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Təhlükəsizlik Xüsusiyyətləri</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>cPanel</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>FTP Girişi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Fayl İdarəedici</li>
+              </ul>
+            </div>
+            <button class="text-[14px] text-[#a271f1] px-[12px] py-[8px] mt-[24px] rounded-3xl border-[1px] border-[#a271f1] hover:bg-[#a271f1] hover:text-white duration-200">Sifariş et</button>
+          </article>
+
+          <article onclick="planiSec(this)" class="bg-[#fafbff]  w-[100%] shadow-xl 2xs:w-[44%] sm:w-[33%] sm:m-0 h-[662px] sm:h-[678px] m-[16px] p-[24px] flex flex-col rounded-xl border-2 hover:!border-[#9228e4] duration-200 relative border-[#9228e4]">
+            <h3 class="py-[8px] px-[4px] text-[24px] text-[#300b60] font-bold xs:text-[36px]">₼<span class="qiymet">10</span><sub class="sub ml-[8px] text-[14px] font-semibold">/ay</sub></h3>
+            <div class="w-[111px] bg-white px-[12px] py-[8px] text-[12px] text-[#a271f1] rounded-3xl font-bold absolute right-3 top-3">ƏN POPULYAR</div>
+            <div class="bg-white py-[12px] px-[8px] text-[#300b60]">
+              <h5 class="text-[18px] font-bold mb-[30px] xs:text-[24px]">Standart</h5>
+              <ul>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">2</b> Domen</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">8 GB</b> Disk Həcmi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">5</b> E-mail Hesabı</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Premium müştəri dəstəyi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>SSL Təhlükəsizliyi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Yedəkləmə və bərpa</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">Limitsiz</b> Trafik</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Təhlükəsizlik Xüsusiyyətləri</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>cPanel</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>FTP Girişi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Fayl İdarəedici</li>
+              </ul>
+            </div>
+            <button class="text-[14px] text-white bg-[#a271f1] px-[12px] py-[8px] mt-[24px] rounded-3xl border-[1px] border-[#a271f1] hover:bg-[#a271f1] hover:text-white duration-200">Sifariş et</button>
+          </article>
+          <article onclick="planiSec(this)" class="bg-[#fafbff] w-[100%] shadow-xl 2xs:w-[44%] sm:w-[33%] sm:m-0 h-[662px] m-[16px] p-[24px] flex flex-col rounded-xl border-2 border-[#fafbff] hover:!border-[#9228e4] duration-200">
+            <h3 class="py-[8px] px-[4px] text-[24px] text-[#300b60] font-bold xs:text-[36px]">₼<span class="qiymet">20</span><sub class="sub ml-[8px] text-[14px] font-semibold">/ay</sub></h3>
+            <div class="bg-white py-[12px] px-[8px] text-[#300b60]">
+              <h5 class="text-[18px] font-bold mb-[30px] xs:text-[24px]">Professional</h5>
+              <ul>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">5</b> Domen</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">4 GB</b> Disk Həcmi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">Limitsiz</b> E-mail Hesabı</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Premium müştəri dəstəyi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>SSL Təhlükəsizliyi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Yedəkləmə və bərpa</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i> <b class="font-bold">Limitsiz</b> Trafik</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Təhlükəsizlik Xüsusiyyətləri</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>cPanel</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>FTP Girişi</li>
+                <li class="text-[14px] text-[#300b60] mt-[12px] font-light"><i class="fa-solid fa-check pr-[12px]"></i>Fayl İdarəedici</li>
+              </ul>
+            </div>
+            <button class="text-[14px] text-[#a271f1] px-[12px] py-[8px] mt-[24px] rounded-3xl border-[1px] border-[#a271f1] hover:bg-[#a271f1] hover:text-white duration-200">Sifariş et</button>
+          </article>
+        </div>
+    </section>
+    <section id="startuplar" class="px-[24px] max-w-[1280px] m-auto w-[100%]">
+      <div class="flex flex-col gap-8 m:flex-row m:gap-0 m:justify-between m:items-center">
+        <div class="">
+          <h2 class="text-[#300b60] font-semibold mb-[8px] xs:text-[22px] s:text-[42px]">Startuplar</h2>
+          <p class="text-[#300b60] text-[14px] font-light xs:text-[16px] s:text-[20px]">Mütəxəssis məsləhətlərimizlə biznesinizi necə inkişaf etdirəcəyinizi öyrənin.</p>
+        </div>
+        <button class="max-w-[200px] h-[44px] flex justify-between px-[24px] items-center  py-[10px] font-medium text-white bg-[#a271f1] hover:bg-[#7d3be2] rounded-[8px]">Bütün StartUplar <img class="w-[12px] mt-[4px]" src="icon/chevrons-right (2).svg" alt="" /></button>
+      </div>
+      <div class="flex flex-col gap-8 my-[60px] m:flex-row items-center content-center">
+        <article class="max-w-[672px] w-[100%] bg-[#faf4ff] p-4 rounded-2xl border-[1px] border-[#e5e7eb] m:w-[33%] h-[100%]">
+          <div class="rounded-2xl overflow-hidden">
+            <img class="w-full hover:scale-110 duration-[.3s] bg-center object-cover" src="img/GrTVyjXWXE5FzL2aFK72E4iL6izCF5qP2xENi1i1.png" alt="wisher" />
+          </div>
+          <div class="flex flex-col content-between justify-start">
+            <a class="block text-[24px] text-[#300b60] font-semibold mt-[24px]">Wisher.az</a>
+            <p class="text-[#5a27a2] leading-7 mt-2">Wisher.az xüsusi günləri xatırlamaq və qeyd etmək üçün şəxsi köməkçinizdir.</p>
+            <button class="max-w-[126px] text-[14px] font-medium text-white bg-[#a271f1] hover:bg-[#7d3be2] rounded-[60px] mt-[16px] py-[8px] px-[16px]">Ətraflı oxu...</button>
+          </div>
+        </article>
+        <article class="max-w-[672px] w-[100%] bg-[#faf4ff] p-4 rounded-2xl border-[1px] border-[#e5e7eb] m:w-[33%] h-[100%]">
+          <div class="min-w-[120px] min-h-[80px] rounded-2xl overflow-hidden">
+            <img class="w-full hover:scale-110 duration-[.3s] bg-center object-cover" src="img/FEJiun5EcIZrI9J7vYCrPZLqO0mjMU0YkDI7dfKO.png" alt="telefon" />
+          </div>
+          <div class="flex flex-col content-between justify-start">
+            <a class="block text-[24px] text-[#300b60] font-semibold mt-[24px]">telefon.az</a>
+            <p class="text-[#5a27a2] leading-7 mt-2">Telefonların online alışı və satışı</p>
+            <br>
+            <button class="max-w-[126px] text-[14px] font-medium text-white bg-[#a271f1] hover:bg-[#7d3be2] rounded-[60px] mt-[16px] py-[8px] px-[16px]">Ətraflı oxu...</button>
+          </div>
+        </article>
+        <article class="max-w-[672px] w-[100%] bg-[#faf4ff] p-4 rounded-2xl border-[1px] border-[#e5e7eb] m:w-[33%]">
+          <div class="min-w-[120px] min-h-[80px] rounded-2xl overflow-hidden">
+            <img class="w-full hover:scale-110 duration-[.3s] bg-center object-cover" src="img/n6JovzwQ5e7Bhz632qaCKE38FOqbGwBKet2dB2lc.jpg" alt="futbol" />
+          </div>
+          <div class="flex flex-col content-between justify-start">
+            <a class="block text-[24px] text-[#300b60] font-semibold mt-[24px]">football.biz</a>
+            <p class="text-[#5a27a2] leading-7 mt-2">Futbol nəticələrinin canlı təqdim edilməsi</p>
+            <br>
+            <button class="max-w-[126px] text-[14px] font-medium text-white bg-[#a271f1] hover:bg-[#7d3be2] rounded-[60px] mt-[16px] py-[8px] px-[16px]">Ətraflı oxu...</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="statistika" class="text-center m:mb-32">
+      <div class="bg-[#a271f1] p-[20px] m:h-[280px] m:relative ">
+        <h2 class="font-medium text-white xxs:text-[22px] s:text-[32px] m:mt-[60px]">Statistikalarımız</h2>
+        <div class="mt-4 flex flex-col gap-4 items-center m:h-[126px] m:flex-row m:justify-center m:gap-0 m:drop-shadow-2xl m:absolute m:bottom-[-62px] m:right-[0px] m:left-[0px]">
+          <div class="bg-white p-4 rounded-[8px] w-[208px] xxs:w-[240px] s:w-[272px] m:rounded-[0] m:px-[40px] m:py-[32px]">
+            <h4 class="text-[20px] text-[#4a2182] font-bold m:text-[24px]">20+ il</h4>
+            <p class="text-[14px] font-light text-[#4a2182]">Biz Təcrübəmizə Güvənirik</p>
+          </div>
+          <div class="bg-white p-4 rounded-[8px] w-[208px] xxs:w-[240px] s:w-[272px] m:rounded-[0] m:px-[40px] m:py-[32px]">
+            <h4 class="text-[20px] text-[#4a2182] font-bold m:text-[24px]">1000+</h4>
+            <p class="text-[14px] font-light text-[#4a2182]">Məmnun Müştərilər</p>
+          </div>
+          <div class="bg-white p-4 rounded-[8px] w-[208px] xxs:w-[240px] s:w-[272px] m:rounded-[0] m:px-[40px] m:py-[32px]">
+            <h4 class="text-[20px] text-[#4a2182] font-bold m:text-[24px]">200+</h4>
+            <p class="text-[14px] font-light text-[#4a2182]">Tamamlanan Layihələr</p>
+          </div>
+          <div class="bg-white p-4 rounded-[8px] w-[208px] xxs:w-[240px] s:w-[272px] m:rounded-[0] m:px-[40px] m:py-[32px]">
+            <h4 class="text-[20px] text-[#4a2182] font-bold m:text-[24px]">25+</h4>
+            <p class="text-[14px] font-light text-[#4a2182]">Peşəkarlar Komandası</p>
+          </div>
+        </div>
+        <div>
+          
+        </div>
+      </div>
+    </section>
+    <section id="komandamız" class="text-center mt-6 px-2 max-w-[1280px] m-auto">
+      <div class="mb-12">
+        <h2 class="text-[18px] text-[#300b60] mb-2 font-bold xs:text-[22px] s:text-[32px]">Komandamızın Pərdə Arxası</h2>
+        <p class="text-[#4a2182] font-semibold s:text-[20px]">Komandamızla Tanış Olaq</p>
+      </div>
+      <div id="komanda" class="flex flex-col gap-[10px] justify-evenly items-center 2xs:flex-row flex-wrap 2xs:gap-[24px]">
+      </div>
+    </section>
+    <section id="ishler" class="text-center mt-6 px-2">
+      <div class="mb-12">
+        <h2 class="text-[18px] text-[#300b60] mb-2 font-bold xs:text-[22px] s:text-[32px]">Son İşlərimiz</h2>
+        <p class="text-[#4a2182] font-semibold s:text-[20px]">Paylaşmaqdan Qürur Duyuruq</p>
+      </div>
+      <div class="flex flex-col gap-[10px] justify-evenly items-center 2xs:flex-row flex-wrap 2xs:gap-[24px]">
+        <article class="bg-[#faf4ff] p-[24px] rounded-[30px] border-2 border-[#e4d7fd] w-[100%] max-w-[516px] s:w-[50%] m:max-w-[636px]">
+          <div class="flex flex-col items-start">
+            <img class="h-[250px] m-auto w-full object-cover" src="img/wKyykqEbaB5lQ5Q4bq6r5KcpP91bZytQXDtBopDY.png" alt="" />
+            <h4 class="text-[#300b60] pt-[24px] font-semibold">BİOPHYSİCS.AZ</h4>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] p-[24px] rounded-[30px] border-2 border-[#e4d7fd] max-w-[516px] s:w-[50%] m:max-w-[636px]">
+          <div class="flex flex-col items-start">
+            <img src="img/Mupn6xSf0FTlbBj0ilDZAqXuLiLrwFGjZct4gQLH.png" alt="" />
+            <h4 class="text-[#300b60] pt-[24px] font-semibold">UREB.COM</h4>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] p-[24px] rounded-[30px] border-2 border-[#e4d7fd] max-w-[516px] s:w-[50%] m:max-w-[636px]">
+          <div class="flex flex-col items-start">
+            <img src="img/ZYfooZQ12g9cwbdUYdc9wEsHDXjshxZmRmQB5z9h.png" alt="" />
+            <h4 class="text-[#300b60] pt-[24px] font-semibold">UG.NEWS</h4>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] p-[24px] rounded-[30px] border-2 border-[#e4d7fd] max-w-[516px] s:w-[50%] m:max-w-[636px]">
+          <div class="flex flex-col items-start">
+            <img src="img/2MQEImHKxKRLKbEGPUt9xQY2QiSlQw1gWE7RdkKm.png" alt="" />
+            <h4 class="text-[#300b60] pt-[24px] font-semibold">FOOTBALL.BİZ</h4>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] p-[24px] rounded-[30px] border-2 border-[#e4d7fd] max-w-[516px] s:w-[50%] m:max-w-[636px]">
+          <div class="flex flex-col items-start">
+            <img src="img/mMkkjJ32v64o4mN5tuMBvn7SWWkd1dPBBM1ZBzE2.png" alt="" />
+            <h4 class="text-[#300b60] pt-[24px] font-semibold">WISHER.AZ</h4>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] p-[24px] rounded-[30px] border-2 border-[#e4d7fd] max-w-[516px] s:w-[50%] m:max-w-[636px]">
+          <div class="flex flex-col items-start">
+            <img src="img/7ZV1bRucrPWExvpsJqLyFiELk7fHAOk6ZtPVHpNl.png" alt="" />
+            <h4 class="text-[#300b60] pt-[24px] font-semibold">IMEXCOMMODITIES.COM</h4>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    <section id="reyler" class="text-center mt-6 px-2 max-w-[1280px] m-auto">
+      <div class="mb-12">
+        <h2 class="text-[18px] text-[#300b60] mb-2 font-bold xs:text-[22px] s:text-[32px]">Müştərilərimizin Rəyləri</h2>
+        <p class="text-[#4a2182] font-semibold s:text-[20px]">Müştərilərin fikirləri</p>
+      </div>
+      <div class="swiper mySwiper border-[1px] border-[#e5e7eb] mb-[40px] rounded-[8px] p-[24px] !h-[360px]">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex flex-col items-center justify-center gap-3 p-[24px] mt-[40px]">
+            <h4 class="text-[#4a2182] text-[20px]">Müştərilərdən müsbət rəy</h4>
+            <p class="text-[#64748b] px-[24px] mt-[8px] font-light">Sayt.az saytımın hazırlanmasında gözləntilərimi aşdı. Mənim istəklərimi mükəmməl şəkildə əks etdirdi.</p>
+            <div class="flex gap-4 justify-center my-[30px]">
+              <div class="overflow-hidden w-[50px] h-[50px] rounded-[50%]">
+                <img src="img/kBaPiZJ8SftpeTvCglQ9wTUC7BunjjhvfPKv3e2P.png" alt="" />
+              </div>
+              <div class="flex flex-col items-start">
+                <h3 class="text-[#334155]">Seljan Novruz</h3>
+                <p class="text-[#64748b]">CEO</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col items-center justify-center gap-3 p-[24px] mt-[40px]">
+            <h4 class="text-[#4a2182] text-[20px]">Müştərilərdən müsbət rəy</h4>
+            <p class="text-[#64748b] px-[24px] mt-[8px] font-light">Veb saytımı hazırlamaq üçün Sayt.az-ı seçmək biznesim üçün verdiyim ən yaxşı qərar idi.</p>
+            <div class="flex gap-4 justify-center my-[30px]">
+              <div class="overflow-hidden w-[50px] h-[50px] rounded-[50%]">
+                <img src="img/WAUSkNOdjK5fUxWQs2x7jOeOr4f0WZIgumqqhb31.png" alt="" />
+              </div>
+              <div class="flex flex-col items-start">
+                <h3 class="text-[#334155]">Hikmat Taghiyev</h3>
+                <p class="text-[#64748b]">Accountant</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col items-center justify-center gap-3 p-[24px] mt-[40px]">
+            <h4 class="text-[#4a2182] text-[20px]">Müştərilərdən müsbət rəy</h4>
+            <p class="text-[#64748b] px-[24px] mt-[8px] font-light">Sayt.az komandası tərəfindən hazırlanan ev alqı-satqısı saytı, gözləntilərimi tamamilə doğrultdu. Sayt.az-a dəyərli xidmətləri üçün təşəkkür edirəm.</p>
+            <div class="flex gap-4 justify-center my-[30px]">
+              <div class="overflow-hidden w-[50px] h-[50px] rounded-[50%]">
+                <img src="img/t6bTFdGMt22ImMHtBk82gD3DTDg0cQ9jMUuljIEW.png" alt="" />
+              </div>
+              <div class="flex flex-col items-start">
+                <h3 class="text-[#334155]">Bahman Ahmadlı</h3>
+                <p class="text-[#64748b]">CEO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section id="bloqumuz" class="text-center mt-6 px-2 max-w-[1280px] m-auto">
+      <div class="mb-12">
+        <h2 class="text-[#300b60] mb-2 font-bold xs:text-[22px] s:text-[32px]">Bloqumuza daxil olun</h2>
+        <p class="text-[#4a2182] text-[20px]">Vebin İnkişafı, Dizaynı və Onlayn Strategiyaları ilə bağlı maraqlı məqalələri kəşf edin</p>
+      </div>
+      <div class="flex flex-col gap-6 s:flex-row s:flex-wrap justify-around  mb-[24px]">
+        <article class="bg-[#faf4ff] p-2 border-2 border-[#a271f1] rounded-[8px] hover:border-[#6829c6] 2s:w-[48%] xl:w-[30%]">
+          <div class="border-[1px] border-[#e2e8f0] rounded-[8px] w-full overflow-hidden">
+            <img class="w-[60%] m-auto 2s:max-h-[240px]" src="img/F9fi8pQIutOxgHSQBQdOz3IYGZjHvpCjPMyeKbWQ.jpg" alt="" />
+          </div>
+          <h4 class="text-[20px] text-[#334155] font-medium mt-[30px] mb-[24px]">Uğurlu biznes üçün hansı veb trendləri izləməlisən?</h4>
+          <div class="flex flex-wrap gap-2">
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">Feb 27, 2025</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">webdesign</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">marketinq</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">sayt</p>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] w-[100%] p-2 border-2 border-[#a271f1] rounded-[8px] hover:border-[#6829c6] 2s:w-[48%] xl:w-[30%]">
+          <div class="border-[1px] border-[#e2e8f0] rounded-[8px] w-full overflow-hidden">
+            <img class="w-full h-full 2s:max-h-[240px]" src="img/DUPcyTWGCtnRzHz9801ms8fDZWbMUsRIoErzIdyW.jpg" alt="" />
+          </div>
+          <h4 class="text-[20px] text-[#334155] font-medium mt-[30px] mb-[24px]">Uğurlu biznes üçün hansı veb trendləri izləməlisən?</h4>
+          <div class="flex flex-wrap gap-2">
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">Feb 6, 2025</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">sayt yaratmaq</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">sayt sifarişi</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">saytların hazırlanması</p>
+          </div>
+        </article>
+        <article class="bg-[#faf4ff] p-2 border-2 border-[#a271f1] rounded-[8px] hover:border-[#6829c6] 2s:w-[48%] xl:w-[30%]">
+          <div class="border-[1px] border-[#e2e8f0] rounded-[8px] w-full overflow-hidden">
+            <img class="w-[80%] m-auto 2s:max-h-[240px]" src="img/numKcPzot4A6JVvsEvxWnmTKm1LRLr3svtTxTDU5.jpg" alt="" />
+          </div>
+          <h4 class="text-[20px] text-[#334155] font-medium mt-[30px] mb-[24px]">Uğurlu biznes üçün hansı veb trendləri izləməlisən?</h4>
+          <div class="flex flex-wrap gap-2">
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">Jan 29, 2025</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">marketinq</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">social</p>
+            <p class="bg-[#a271f2] text-white px-[16px] rounded-[8px] h-[32px] flex justify-center items-center">peşəkar veb dizayn</p>
+          </div>
+        </article>
+      </div>
+      <button class="max-w-[300px] w-[40%] m-auto h-[44px] my-[40px] px-[30px] py-[10px] font-medium text-white bg-[#a271f1] hover:bg-[#7d3be2] rounded-[8px]">Bütün Bloqlar</button>
+    </section>
+    <section id="videolar" class="text-center mt-6 px-2 max-w-[1280px] m-auto">
+      <div class="m-[60px]">
+        <h2 class="text-[#300b60] mb-2 font-bold xs:text-[22px] s:text-[32px]">Videolarımızı Kəşf Edin</h2>
+        <p class="text-[#4a2182] text-[20px]">Kəşf Edin, Öyrənin və Uğur Qazanın</p>
+          <p class="text-[#4a2182] text-[20px]">Son nailiyyətlərimizi, media çıxışlarımızı və ətraflı təlimlərimizi izləmək üçün video kolleksiyamıza göz atın. İdeal veb saytınızı qurmaqda sizə necə kömək edə biləcəyimizi öyrənin və uğur hekayəmizdən ilham alın.</p>
+      </div>
+      <div>
+        <div class="swiper mySwiper max-w-[1280px] mb-[40px] rounded-[8px] !p-[24px] ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide !flex !justify-center !items-center w-[450px]">
+              <iframe width="560" height="400" src="https://www.youtube.com/embed/lnpAcQS6Xz4" title="Domen nədir? Domen nə üçündür? Domen necə almaq olar?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             
+            </div>
+            <div class="swiper-slide !flex !justify-center !items-center w-[450x]">
+              <iframe width="560" height="400" src="https://www.youtube.com/embed/_iU4jMtpfpY" title="Vurma Yarismasi.Gulmeli video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#faf4ff] mt-6 m-auto border-[1px] border-[#e2e8f0]">
+      <div class="max-w-[1280px] w-[100%] m-auto py-[24px]">
+        <div class="">
+        <div class="pt-[48px] px-[16px] flex flex-col gap-8 2s:flex-row justify-between 2s:py-[72px]">
+          <div>
+              <div>
+            <img class="w-[200px]" src="icon/saytaz.svg" alt="sayt/az" />
+          </div>
+          <p class="text-[#4a2182] max-w-[456px] mb-10 leading-6 font-light s:text-[14px]">Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.</p>
+          <div>
+            <p class="text-[#4a2182] font-bold mb-4">Bizi izləyin :</p>
+            <div class="flex justify-between max-w-[300px]">
+              <i class="fa-brands fa-facebook text-[35px] text-[#a271f1] s:text-[45px]"></i>
+              <i class="fa-brands fa-instagram text-[35px] text-[#a271f1] s:text-[45px]"></i>
+              <i class="fa-brands fa-whatsapp text-[35px] text-[#a271f1] s:text-[45px]"></i>
+              <i class="fa-brands fa-linkedin text-[35px] text-[#a271f1] s:text-[45px]"></i>
+              <i class="fa-brands fa-youtube text-[35px] text-[#a271f1] s:text-[45px]"></i>
+            </div>
+          </div>
+          </div>
+          <div class="s:flex s:flex-row s:gap-8 2s:mx-[50px] xl:mr-[150px]">
+            <div>
+              <h4 class="text-[#300b60] text-[18px] uppercase font-bold py-[5px] xs:text-[24px]">Hostinq & Domen</h4>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Domen</p>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Veb Hostinq</p>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">VPS Hostinq</p>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Server</p>
+            </div>
+            <div>
+              <h4 class="text-[#300b60] text-[18px] uppercase font-bold py-[5px] xs:text-[24px]">Şirkət</h4>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Haqqımızda</p>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Əlaqə</p>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Bloq</p>
+              <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Portfolio</p>
+          </div>
+          </div>
+        </div>
+           <div class="2s:flex 2s:flex-row 2s:justify-between 2s: items-center 2s:border-t-[1px] 2s:border-[#e2e8f0]">
+          <div class="flex flex-col gap-1 border-t-[1px] border-[#e2e8f0] my-[16px] 2s:border-0">
+            <div class="flex flex-row items-center gap-2 p-[16px] pb-0">
+              <img class="" src="icon/phone-call.svg" alt="" />
+              <p class="text-[#4a2182] font-light whitespace-nowrap">+(99470) 330-00-04</p>
+            </div>
+            <div class="flex flex-row items-center gap-2 px-[16px]">
+              <img class="" src="icon/email.svg" alt="" />
+              <p class="text-[#4a2182] font-light">support@sayt.az</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1 border-t-[1px] border-[#e2e8f0] my-[16px] 2s:border-0">
+              <p class="text-[#4a2182] font-light px-[16px]">&copy;Copyright 2004-2025 &copy;Sayt.az. Bütün Hüquqlar Qorunur.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+    <div class="fixed bottom-5 right-6">
+      <div class="relative">
+        <input type="checkbox" id="photo" class="toggle-checkbox" hidden>
+        <label for="photo" class="fa-solid fa-xmark text-[22px] absolute top-[-40px] right-[-15px]"></label>
+        <div class="weare w-[124px] h-[79px] absolute bottom-2 left-[-45px]">
+          <img class="" src="icon/168-r-br.svg" alt="" />
+        </div>
+        <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[50%] bg-[#a271f1]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" height="32px" fill="white" width="32px" role="img" alt="Söhbət ikonu" aria-labelledby="openIconTitle openIconDesc" class="tawk-min-chat-icon">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M400 26.2c-193.3 0-350 156.7-350 350 0 136.2 77.9 254.3 191.5 312.1 15.4 8.1 31.4 15.1 48.1 20.8l-16.5 63.5c-2 7.8 5.4 14.7 13 12.1l229.8-77.6c14.6-5.3 28.8-11.6 42.4-18.7C672 630.6 750 512.5 750 376.2c0-193.3-156.7-350-350-350zm211.1 510.7c-10.8 26.5-41.9 77.2-121.5 77.2-79.9 0-110.9-51-121.6-77.4-2.8-6.8 5-13.4 13.8-11.8 76.2 13.7 147.7 13 215.3.3 8.9-1.8 16.8 4.8 14 11.7z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="/js/header.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/komandaData.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>

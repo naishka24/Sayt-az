@@ -1,0 +1,15 @@
+@import "tailwindcss";
+/* npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch */
+
+@theme {
+  --breakpoint-xs: 340px;
+  --breakpoint-xxs: 390px;
+  --breakpoint-2xs: 580px;
+  --breakpoint-s: 768px;
+  --breakpoint-2s: 840px;
+  --breakpoint-sm: 968px;
+  --breakpoint-m: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+

@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../src/font.css" />
+  <link rel="stylesheet" href="../src/input.css" />
+  <link rel="stylesheet" href="../src/output.css" />
+  <link rel="stylesheet" href="../src/style.css" />
+  <link rel="shortcut icon" href="../icon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header class="bg-white flex justify-between items-center p-[24px] gap-[20px] sticky top-0 z-[1000]">
+    <a href="/index.html"><img class="min-w-[50px] w-[111px]" src="../icon/saytaz.svg" alt="Sayt.az" /></a>
+    <menu class="hidden m:flex justify-around gap-[20px]">
+
+      <li onclick="navbarOpen('veb')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Veb sayt <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+      <div id="veb" class="scrollbar hidden min-w-[350px] h-[470px] overflow-y-scroll absolute top-17 left-20 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+          <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/website-program.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Saytların hazırlanması</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Veb saytların hazırlanması</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb2.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hökumət və qeyri-kommersiya saytları</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Hökumət və qeyri-kommersiya saytları</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb3.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Kiçik biznes saytları</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Kiçik bizneslər üçün saytlar</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb4.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">E-ticarət saytları</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">E-ticarət saytları</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb5.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hüquq firma saytı</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Hüquq firma saytı</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb6.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloqlar və Şəxsi Vebsayt</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Bloqlar və Şəxsi Vebsayt</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb7.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Daşınmaz əmlak veb saytı</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Daşınmaz əmlak veb saytı</p>
+          </div>
+
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb8.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Tibb - Doktor Saytlar</p>
+            <p class="text-[14px] text-[#64748B] font-[600]">Tibb Doktor Saytlar</p>
+          </div>
+          <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+            <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb9.svg" alt="" /></div>
+            <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">WordPress Saytları</p>
+            <p class="text-[14px] text-[rgb(100,116,139)] font-[600]">WordPress Saytları</p>
+          </div>
+
+      </div>
+
+      <li onclick="navbarOpen('domen')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Domen <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+      <div id="domen" class="scrollbar hidden min-w-[350px] overflow-y-scroll absolute top-17 left-70 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+        <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/network-browser.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Domen</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Etibarlı xidmət</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/network-www.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Pulsuz Domen Qeydiyyatı</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Sürətli qeydiyyat</p>
+        </div>
+
+      </div>
+
+      <li onclick="navbarOpen('host')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Hostinq <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+      <div id="host" class="scrollbar hidden min-w-[350px] overflow-y-scroll absolute top-17 left-90 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+        <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/hosting-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Veb Hostinq</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">₼10.00/ay-dan başlayaraq</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/vps-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">VPS</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">₼15.00/ay-dan başlayaraq</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/server-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Server</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">99.00/ay-dan başlayaraq</p>
+        </div>
+
+      </div>
+
+      <li onclick="navbarOpen('xidmet')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Xidmətlər <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+      <div id="xidmet" class="scrollbar hidden min-w-[350px] overflow-y-scroll absolute top-17 left-120 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+        <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/order-track.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Vebsayt sifarişinizi izləyin</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Sifarişinizi asanlıqla izləyin</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/calculator.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sayt Kalkulyatoru</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Saytın Qiymətini Öyrən</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/seo.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">SEO Xidməti</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Axtarış Sistemi Optimizasiyası</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/mobil.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Mobil Tətbiqlərin Hazırlanmasıi</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Mobil tətbiq xidməti</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/xidmet.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Texniki Xidmət</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Texniki Xidmət</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/sosial.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sosial Media Marketinq</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Sosial Media Marketinq</p>
+        </div>
+
+      </div>
+
+      <li onclick="navbarOpen('sirket')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Şirkət <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+      <div id="sirket" class="scrollbar hidden min-w-[350px] h-[470px] overflow-y-scroll absolute top-17 left-125 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px] bg-white z-[999]">
+
+        <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/haqqimizda.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Haqqımızda</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Bizim komanda üzvlərimiz</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/blog-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloq</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Ən son xəbərlər və faydalı məlumatlar</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/startuplar.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bütün StartUplar</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Startupları idarə edən komandamıza qoşulun</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/portfolio-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Portfolio</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Hazırladığımız hər bir iş bizim üçün dəyərlidir</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/career-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Karyera</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Hazırkı vakansiyalarımız</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/freelans.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Freelance</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Sizdə qeydiyyatdan keçməklə freelance işləyə bilərsiz</p>
+        </div>
+
+        <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+          <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/contact-icon.svg" alt="" /></div>
+          <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Əlaqə Forması</p>
+          <p class="text-[14px] text-[#64748B] font-[600]">Əlaqə Saxlayın</p>
+        </div>
+
+      </div>
+
+    </menu>
+    <div class="flex items-center justify-between gap-[15px] cursor-pointer py-[2px]">
+      <div onclick="valyutaniDiliSec('valyuta')" class="hoveredbar relative flex items-center gap-[12px]">
+        <p class="text-[22px] text-[#300c60]">₼</p>
+        <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc]"></i>
+        <div id="valyutalar" class="hidden absolute top-8"> 
+          <ul>
+            <li id="dollar" onclick="chooseCurrency(event, 'dollar')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] w-[60px] h-[35px] px-[25px] py-[5px] text-[#300c60]">$</li>
+            <li id="manat" onclick="chooseCurrency(event, 'manat')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0] w-[60px] h-[35px] px-[25px] py-[5px] text-[#300c60] bg-[#e4d6fa]">₼</li>
+          </ul>
+        </div>
+      </div>
+      <div onclick="valyutaniDiliSec('dil')" class="hoveredbar relative flex items-center gap-[12px]">
+        <img class="w-[20px]" src="../icon/az.png" alt="azerb" /> 
+        <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc] hover:text-[#797979] duration-[.2s]"></i>
+        <div id="flags" class="hidden absolute top-8"> 
+          <ul >
+            <li id="azer" onclick="chooseLang(event, 'azer')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] w-[60px] h-[35px] text-center  px-[20px] py-[10px] text-[#300c60] "><img class="w-[20px]" src="../icon/usa-flag.jpg.webp" alt="usa" /></li>
+            <li id="usa" onclick="chooseLang(event, 'usa')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0]  w-[60px] h-[35px]  text-center px-[20px] py-[5px] text-[#300c60] bg-[#e4d6fa]"><img class="w-[20px]" src="../icon/az.png" alt="azerb" /></li>
+          </ul>
+        </div>
+      </div>
+      <div onclick="sidebarOpen()"><i class="fa-solid fa-bars text-[18px] pl-[5px]"></i></div>
+      <div class="hidden xl:flex flex-row gap-[1rem]">
+        <button class="w-[175px]  p-[10px] rounded-[8px] font-[500] cursor-pointer text-white bg-linear-to-r from-[#732ae4] to-[#e4b1ca]">Qiymət Təklifi Al</button>
+        <button class="w-[120px] p-[10px] rounded-[8px] font-[500] cursor-pointer text-[#a271f1] border-[1px] border-[#a271f1]">Daxil olun</button>
+      </div>
+    </div>
+
+      <div id="sidebar" class="hidden bg-white max-w-[400px] w-[100%] absolute top-0 right-0 bottom-0 border-[1px] border-[#e0e0e0] p-[24px] h-[100vh] z-[99999]">
+        <i onclick="xmark()" class="fa-solid fa-xmark text-[1.5em] absolute right-2 top-2 p-[10px]"></i>
+        <menu class="flex flex-col justify-around gap-[20px] my-[24px] px-[20px] m:hidden">
+
+          <li onclick="navbarOpen('vebSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Veb sayt <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+          <div id="vebSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] h-[470px] overflow-y-scroll absolute top-20 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+  
+              <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/website-program.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Saytların hazırlanması</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Veb saytların hazırlanması</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb2.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hökumət və qeyri-kommersiya saytları</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Hökumət və qeyri-kommersiya saytları</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb3.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Kiçik biznes saytları</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Kiçik bizneslər üçün saytlar</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb4.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">E-ticarət saytları</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">E-ticarət saytları</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb5.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Hüquq firma saytı</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Hüquq firma saytı</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb6.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloqlar və Şəxsi Vebsayt</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Bloqlar və Şəxsi Vebsayt</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb7.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Daşınmaz əmlak veb saytı</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Daşınmaz əmlak veb saytı</p>
+              </div>
+  
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb8.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Tibb - Doktor Saytlar</p>
+                <p class="text-[14px] text-[#64748B] font-[600]">Tibb Doktor Saytlar</p>
+              </div>
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+                <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/veb9.svg" alt="" /></div>
+                <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">WordPress Saytları</p>
+                <p class="text-[14px] text-[rgb(100,116,139)] font-[600]">WordPress Saytları</p>
+              </div>
+  
+          </div>
+  
+          <li onclick="navbarOpen('domenSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Domen <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+          <div id="domenSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] overflow-y-scroll absolute top-32 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+  
+            <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/network-browser.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Domen</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Etibarlı xidmət</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/network-www.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Pulsuz Domen Qeydiyyatı</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Sürətli qeydiyyat</p>
+            </div>
+  
+          </div>
+  
+          <li onclick="navbarOpen('hostSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Hostinq <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+          <div id="hostSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] overflow-y-scroll absolute top-43 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+  
+            <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/hosting-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Veb Hostinq</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">₼10.00/ay-dan başlayaraq</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/vps-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">VPS</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">₼15.00/ay-dan başlayaraq</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/server-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Server</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">99.00/ay-dan başlayaraq</p>
+            </div>
+  
+          </div>
+  
+          <li onclick="navbarOpen('xidmetSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Xidmətlər <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+          <div id="xidmetSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] overflow-y-scroll absolute top-55 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+  
+            <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/order-track.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Vebsayt sifarişinizi izləyin</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Sifarişinizi asanlıqla izləyin</p>
+            </div>
+            <a href="/pages/calc.html">
+              <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/calculator.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sayt Kalkulyatoru</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Saytın Qiymətini Öyrən</p>
+            </div>
+            </a>
+            
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/seo.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">SEO Xidməti</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Axtarış Sistemi Optimizasiyası</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/mobil.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Mobil Tətbiqlərin Hazırlanmasıi</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Mobil tətbiq xidməti</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/xidmet.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Texniki Xidmət</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Texniki Xidmət</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/sosial.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Sosial Media Marketinq</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Sosial Media Marketinq</p>
+            </div>
+  
+          </div>
+  
+          <li onclick="navbarOpen('sirketSide')" class="text-[#300c60] font-[600] hover:text-[#a271f1] duration-[.2s] relative"><a>Şirkət <i class="fa-solid fa-angle-down ml-[4px]"></i></a></li>
+          <div id="sirketSide" class="scrollbar bg-white z-[999] hidden max-w-[350px] h-[470px] overflow-y-scroll absolute top-65 right-5 border-[1px] border-[#e0e0e0] rounded-[8px] py-[12px]">
+  
+            <div class="grid items-center justify-start py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/haqqimizda.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Haqqımızda</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Bizim komanda üzvlərimiz</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/blog-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bloq</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Ən son xəbərlər və faydalı məlumatlar</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/startuplar.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Bütün StartUplar</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Startupları idarə edən komandamıza qoşulun</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/portfolio-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Portfolio</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Hazırladığımız hər bir iş bizim üçün dəyərlidir</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/career-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Karyera</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Hazırkı vakansiyalarımız</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/freelans.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Freelance</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Sizdə qeydiyyatdan keçməklə freelance işləyə bilərsiz</p>
+            </div>
+  
+            <div class="grid justify-start items-center py-[12px] pl-[32px] pr-[16px] hover:bg-[#f8fafc]">
+              <div class="col-start-1 col-end-2 row-start-1 row-end-3 bg-[#dbe9fe] p-[12px] rounded-[8px] mr-4 w-[52px]"><img class="max-w-[28px]" src="../icon/contact-icon.svg" alt="" /></div>
+              <p class="col-start-2 col-end-3 row-start-1 row-end-2 text-[#334155]">Əlaqə Forması</p>
+              <p class="text-[14px] text-[#64748B] font-[600]">Əlaqə Saxlayın</p>
+            </div>
+  
+          </div>
+  
+        </menu>
+        <div class="flex py-[20px] px-[10px] gap-[30px]">
+          <div onclick="valyutaniDiliSec('valyuta2')" class="hoveredbar relative flex items-center gap-[12px]">
+            <p class="text-[22px] text-[#300c60]">₼</p>
+            <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc]"></i>
+            <div id="valyutalar2" class="hidden absolute top-8 right-[-15px] bg-white">
+              <ul class="h-[40px]">
+                <li id="dollar" onclick="chooseCurrency(event, 'dollar')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] px-[25px] py-[5px] text-[#300c60] ">$</li>
+                <li id="manat" onclick="chooseCurrency(event, 'manat')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0] px-[25px] py-[5px] text-[#300c60] bg-[#e4d6fa]">₼</li>
+              </ul>
+            </div>
+          </div>
+          <div onclick="valyutaniDiliSec('dil2')" class="hoveredbar relative flex items-center gap-[12px]">
+            <img class="w-[20px]" src="../icon/az.png" alt="azerb" /> 
+            <i class="fa-solid fa-angle-down text-[1.1rem] text-[#ccc] hover:text-[#797979] duration-[.2s]"></i>
+            <div id="flags2" class="hidden absolute top-8 right-[-15px] bg-white"> 
+              <ul class="h-[40px]">
+                <li id="azer" onclick="chooseLang(event, 'azer')" class="border-[1px] rounded-t-[5px] border-[#e0e0e0] px-[22px] py-[10px] text-[#300c60] "><img class="w-[30px]" src="../icon/usa-flag.jpg.webp" alt="usa" /></li>
+                <li id="usa" onclick="chooseLang(event, 'usa')" class="border-[1px] rounded-b-[5px] border-[#e0e0e0] px-[22px] py-[5px] text-[#300c60] bg-[#e4d6fa]"><img class="w-[30px]" src="../icon/az.png" alt="azerb" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="max-w-[350px] w-[100%] p-[10px] rounded-[8px] font-[500] cursor-pointer text-white mb-[10px] bg-linear-to-r from-[#732ae4] to-[#e4b1ca]">Qiymət Təklifi Al</button>
+        <button class="max-w-[350px] w-[100%] p-[10px] rounded-[8px] font-[500] cursor-pointer text-[#a271f1] mt-[10px] border-[1px] border-[#a271f1]">Daxil olun</button>
+      </div>
+  </header>
+  <main class="bg-[#f5f5f5] px-[8px] pt-[24px] pb-[48px] mt-[8px] s:w-[80%] m-auto 2s:flex 2s:gap-[30px] 2s:items-start">
+    <section class="max-w-[1280px] bg-white p-[16px] 2s:w-2/3">
+      <h1 class="text-[48px] font-bold mt-[16px] mb-[48px]">Qiymət Təklifi Al</h1>
+      <p class="text-[18px] font-medium text-[#212529]">Statik səhifələr</p>
+      <div class="bg-[#f5f5f5] overflow-hidden rounded-[6px] mb-10">
+        <div class="mt-[8px]">
+          <div class="py-2 px-4 mt-[16px] ">
+            <p class="mb-4 font-light">Neçə statik səhifə olacaq?</p>
+            <div class="flex flex-row justify-between items-center">
+              <p class="bg-[#a271f2] w-[32px] h-[32px] rounded-[6px] text-white flex justify-center items-center">1</p>
+              <input oninput="sehifeRange('input1')" id="input1" class="appearance-none w-full h-2 bg-[#e5e7eb] rounded-[8px] mx-[10px] accent-[#a271f2]" step="1" max="20" value="4" type="range" />
+              <p class="bg-[#a271f2] w-[32px] h-[32px] rounded-[6px] text-white flex justify-center items-center">20</p>
+            </div>
+          </div>
+
+          <div class="py-2 px-4 mt-[16px] flex flex-row items-center justify-between max-w-[718px] w-[100%]">
+            <p class="font-light w-[30%]">Dizayn mürəkkəblik :</p>
+            <div class="flex flex-col w-[50%]">
+              <div class="flex flex-row justify-between">
+                <p class="font-light">Sadə</p>
+                <p class="font-light">Orta</p>
+                <p class="font-light">Xüsusi</p>
+              </div>
+              <div>
+                <input oninput="sehifeRange('input2')" id="input2" class="appearance-none w-full h-2 bg-[#e5e7eb] rounded-[8px] accent-[#a271f2]" step="1" min="0" value="0" max="2" type="range" />
+              </div>
+            </div>
+          </div>
+
+          <div id="xerc1" class="bg-[#dfe6f1] flex flex-row justify-between items-center py-2 px-4 mt-[16px] h-[65px]">
+            <p class="font-light text-[#285a70]">Xərc :</p>
+            <p class="text-[22px] text-[#a271f2] font-semibold"><span id="span1">4</span> səhifə / ₼ 
+              <span id="span2" class="text-[22px] text-[#a271f2] font-semibold">400</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-[18px] font-medium mt-[12px]">Veb sayt əlavələri</p>
+        <div class="alltoggle bg-[#f5f5f5] overflow-hidden rounded-[6px] mt-[8px] mb-10">
+          <div class="grid grid-cols-1 py-2 px-4 mt-[16px] gap-6 m:grid-cols-2">
+            <div class="flex justify-between">
+            <label for="Toggle1" class="w-full flex items-center !justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Bloq</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle1')" id="Toggle1" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle2" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Üzv girişi /‍‍‍ Profillər</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle2')" id="Toggle2" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle3" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Responsive</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle3')" id="Toggle3" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle4" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Forum</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle4')" id="Toggle4" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle5" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Mesajlaşma</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle5')" id="Toggle5" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle6" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Canlı Söhbət</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle6')" id="Toggle6" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle7" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Qalereya</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle7')" id="Toggle7" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle8" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Əlaqə Forması</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle8')" id="Toggle8" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle9" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Saytda Axtarış</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle9')" id="Toggle9" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle10" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Xəritə Məlumatı / Geolocation</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle10')" id="Toggle10" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle11" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Rezervasyon</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle11')" id="Toggle11" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle12" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Sosial Media inteqrasiyası</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle12')" id="Toggle12" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle13" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Analitika / İzləmə</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle13')" id="Toggle13" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle14" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Admin Panel</p>
+                <span class="relative">
+                  <input onclick="addToggle('Toggle14')" id="Toggle14" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-[#dfe6f1] flex flex-row justify-between items-center py-2 px-4 mt-[16px] h-[65px]">
+            <p class="font-light text-[#285a70]">Xərc :</p>
+            <p class="text-[22px] text-[#a271f2] font-semibold">₼ 
+              <span id="xerc2" class="text-[22px] text-[#a271f2] font-semibold">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-[18px] font-medium mt-[12px]">Axtarış motorunun optimallaşdırılması</p>
+        <div class="bg-[#f5f5f5] overflow-hidden rounded-[6px] mt-[8px] mb-10">
+          <div class="grid grid-cols-1 2xs:grid-cols-2 gap-4 pt-2">
+            <div class="flex flex-wrap gap-x-6 gap-y-4">
+              <label for="check1" class="w-full flex flex-row items-center">
+                <input onclick="addCheck('check1')" class="peer hidden" id="check1" type="checkbox" />
+                <div class="flex justify-center items-center cursor-pointer w-[20px] h-[20px] border-[1px] border-[#9ca3af] rounded-[6px] m-[10px] flex-shrink-0 peer-checked:bg-[#a271f1] peer-checked:border-transparent relative">
+                    <i class="fa-solid fa-check pl-[1px] pt-[1px] absolute inset-0 flex items-center justify-center text-[#f5f5f5] opacity-100 peer-checked:opacity-0"></i>
+                </div>
+                <p class="font-light">Başlıqlar & Meta</p>
+              </label>
+            </div>
+            
+          <div class="flex flex-wrap gap-x-6 gap-y-4">
+            <label for="check2" class="w-full flex flex-row items-center">
+              <input onclick="addCheck('check2')" class="peer hidden" id="check2" type="checkbox" />
+              <div class="flex justify-center items-center cursor-pointer w-[20px] h-[20px] border-[1px] border-[#9ca3af] rounded-[6px] m-[10px] flex-shrink-0 peer-checked:bg-[#a271f1] peer-checked:border-transparent relative">
+                <i class="fa-solid fa-check pl-[1px] pt-[1px] absolute inset-0 flex items-center justify-center text-[#f5f5f5] opacity-100 peer-checked:opacity-0"></i>
+            </div>
+              <p class="font-light">+20 Qabaqcıl Texnika</p>
+            </label>
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-4">
+            <label for="check3" class="w-full flex flex-row items-center">
+              <input onclick="addCheck('check3')" class="peer hidden" id="check3" type="checkbox" />
+              <div class="flex justify-center items-center cursor-pointer w-[20px] h-[20px] border-[1px] border-[#9ca3af] rounded-[6px] m-[10px] flex-shrink-0 peer-checked:bg-[#a271f1] peer-checked:border-transparent relative">
+                <i class="fa-solid fa-check pl-[1px] pt-[1px] absolute inset-0 flex items-center justify-center text-[#f5f5f5] opacity-100 peer-checked:opacity-0"></i>
+            </div>
+              <p class="font-light">Açar söz</p>
+            </label>
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-4">
+            <label for="check4" class="w-full flex flex-row items-center">
+              <input onclick="addCheck('check4')" class="peer hidden" id="check4" type="checkbox" />
+              <div class="flex justify-center items-center cursor-pointer w-[20px] h-[20px] border-[1px] border-[#9ca3af] rounded-[6px] m-[10px] flex-shrink-0 peer-checked:bg-[#a271f1] peer-checked:border-transparent relative">
+                <i class="fa-solid fa-check pl-[1px] pt-[1px] absolute inset-0 flex items-center justify-center text-[#f5f5f5] opacity-100 peer-checked:opacity-0"></i>
+            </div>
+              <p class="font-light">Başlıq Teqləri</p>
+            </label>
+          </div>
+          <div class="flex flex-wrap gap-x-6 gap-y-4">
+            <label for="check5" class="w-full flex flex-row items-center">
+              <input onclick="addCheck('check5')" class="peer hidden" id="check5" type="checkbox" />
+              <div class="flex justify-center items-center cursor-pointer w-[20px] h-[20px] border-[1px] border-[#9ca3af] rounded-[6px] m-[10px] flex-shrink-0 peer-checked:bg-[#a271f1] peer-checked:border-transparent relative">
+                <i class="fa-solid fa-check pl-[1px] pt-[1px] absolute inset-0 flex items-center justify-center text-[#f5f5f5] opacity-100 peer-checked:opacity-0"></i>
+            </div>
+              <p class="font-light">Sitemap</p>
+            </label>
+          </div>
+          </div>
+          
+
+          <div class="bg-[#dfe6f1] flex flex-row justify-between items-center py-2 px-4 mt-[16px] h-[65px]">
+            <p class="font-light text-[#285a70]">Xərc :</p>
+            <p class="text-[22px] text-[#a271f2] font-semibold">₼ 
+              <span id="xerc3" class="text-[22px] text-[#a271f2] font-semibold">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-[18px] font-medium mt-[12px]">Elektron ticarət əlavələri</p>
+        <div class="bg-[#f5f5f5] overflow-hidden rounded-[6px] mt-[8px] mb-10">
+          
+          <div class="grid grid-cols-1 2xs:grid-cols-2 py-2 px-4 mt-[16px] gap-6">
+            <div class="flex justify-between">
+            <label for="Toggle21" class="w-full flex items-center !justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Ödəniş</p>
+                <span class="relative">
+                  <input onclick="addNextToggle('Toggle21')" id="Toggle21" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle22" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Səbət</p>
+                <span class="relative">
+                  <input onclick="addNextToggle('Toggle22')" id="Toggle22" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle23" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Məhsullar</p>
+                <span class="relative">
+                  <input onclick="addNextToggle('Toggle23')" id="Toggle23" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle24" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Bəyəndiklərim</p>
+                <span class="relative">
+                  <input onclick="addNextToggle('Toggle24')" id="Toggle24" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle25" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Filtr</p>
+                <span class="relative">
+                  <input onclick="addNextToggle('Toggle25')" id="Toggle25" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+            <div class="flex justify-between">
+              <label for="Toggle26" class="w-full flex items-center justify-between space-x-4 cursor-pointer dark:text-gray-800">
+                <p class="font-medium text-[14px]">Məhsul Haqqında</p>
+                <span class="relative">
+                  <input onclick="addNextToggle('Toggle26')" id="Toggle26" type="checkbox" class="hidden peer">
+                  <div class="w-10 h-6 rounded-full shadow-inner dark:bg-[#e2e4e8] duration-300 peer-checked:dark:bg-[#a271f1]"></div>
+                  <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full duration-300 shadow peer-checked:right-0 peer-checked:left-auto dark:bg-white"></div>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-[#dfe6f1] flex flex-row justify-between items-center py-2 px-4 mt-[16px] h-[65px]">
+            <p class="font-light text-[#285a70]">Xərc :</p>
+            <p class="text-[22px] text-[#a271f2] font-semibold">₼ 
+              <span id="xerc4" class="text-[22px] text-[#a271f2] font-semibold">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-[18px] font-medium mt-[12px]">Logo dizaynı</p>
+        <div class="bg-[#f5f5f5] overflow-hidden rounded-[6px] mt-[8px] mb-10">
+          <div class="flex flex-col justify-center py-2 px-4 gap-2">
+            <div class="flex justify-between gap-2">
+              <p class="font-light">Ehtiyac yoxdur</p>
+              <p class="font-light ml-[-50px]">Sadə</p>
+              <p class="font-light">Xüsusi</p>
+            </div>
+            <input oninput="logoDesign()" id="input3" class="appearance-none w-full h-2 bg-[#e5e7eb] rounded-[8px] accent-[#a271f2]" step="1" min="0" value="0" max="2" type="range" />
+          </div>
+
+          <div class="bg-[#dfe6f1] flex flex-row justify-between items-center py-2 px-4 mt-[16px] h-[65px]">
+            <p class="font-light text-[#285a70]">Cost :</p>
+            <p class="text-[22px] text-[#a271f2] font-semibold">₼ 
+              <span id="cost" class="text-[22px] text-[#a271f2] font-semibold">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="2s:sticky 2s:top-0 2s:w-1/3 2s:h-screen">
+      <div class="max-w-[1280px] bg-white my-[20px] 2s:my-0 p-[32px]">
+        <div class="flex flex-col gap-4">
+        <p class="font-light">Təklifiniz</p>
+        <div class="flex justify-between">
+          <p class="text-[#8b8b9a]">Statik səhifələr :</p>
+          <p class="text-[18px] text-[#a271f2] font-semibold">₼
+            <span id="statik" class="text-[18px] text-[#a271f2] font-semibold">400</span>
+          </p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-[#8b8b9a]">Əlavələr :</p>
+          <p class="text-[18px] text-[#a271f2] font-semibold">₼
+            <span id="elaveler" class="text-[18px] text-[#a271f2] font-semibold">0</span>
+          </p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-[#8b8b9a]">SEO :</p>
+          <p class="text-[18px] text-[#a271f2] font-semibold">₼
+            <span id="seo" class="text-[18px] text-[#a271f2] font-semibold">0</span>
+          </p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-[#8b8b9a]">E-ticarət :</p>
+          <p class="text-[18px] text-[#a271f2] font-semibold">₼
+            <span id="elektron" class="text-[18px] text-[#a271f2] font-semibold">0</span>
+          </p>
+        </div>
+        <div class="flex justify-between pb-[10px] border-b-[1px] border-[#e5e7eb]">
+          <p class="text-[#8b8b9a]">Logo dizaynı :</p>
+          <p class="text-[18px] text-[#a271f2] font-semibold">₼
+            <span id="logo" class="text-[18px] text-[#a271f2] font-semibold">0</span>
+          </p>
+        </div>
+        <div class="flex justify-between">
+          <p class="text-[#8b8b9a] whitespace-nowrap font-bold">Qeyd :</p>
+          <p class=" text-[#8b8b9a] font-light flex flex-col items-end">Minimum sayt qiyməti ₼
+            <span class="text-[18px] text-[#a271f2] font-semibold">450</span>
+          </p>
+        </div>
+      </div>
+      </div>
+      <div class="bg-[#a271f2] p-[32px] flex justify-between  items-center">
+        <p class="text-[24px] text-white">Ümumi təxmini dəyəri:</p>
+        <p class="text-[24px] text-white whitespace-nowrap">₼
+          <span id="totalQiymet">450</span>
+        </p>
+      </div>
+      <button class="bg-[#2bc48a] mt-6 w-full p-[16px] rounded-[6px] text-white font-bold">Saytınızı İndi Sifariş Edin</button>
+    </section>
+  </main>
+  <footer class="bg-[#faf4ff] mt-6 m-auto border-[1px] border-[#e2e8f0]">
+    <div class="max-w-[1280px] w-[100%] m-auto py-[24px]">
+      <div class="">
+      <div class="pt-[48px] px-[16px] flex flex-col gap-8 2s:flex-row justify-between 2s:py-[72px]">
+        <div>
+            <div>
+          <img class="w-[200px]" src="../icon/saytaz.svg" alt="sayt/az" />
+        </div>
+        <p class="text-[#4a2182] max-w-[456px] mb-10 leading-6 font-light s:text-[14px]">Sayt.az - Web saytların hazırlanması, Domain, Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.</p>
+        <div>
+          <p class="text-[#4a2182] font-bold mb-4">Bizi izləyin :</p>
+          <div class="flex justify-between max-w-[300px]">
+            <i class="fa-brands fa-facebook text-[35px] text-[#a271f1] s:text-[45px]"></i>
+            <i class="fa-brands fa-instagram text-[35px] text-[#a271f1] s:text-[45px]"></i>
+            <i class="fa-brands fa-whatsapp text-[35px] text-[#a271f1] s:text-[45px]"></i>
+            <i class="fa-brands fa-linkedin text-[35px] text-[#a271f1] s:text-[45px]"></i>
+            <i class="fa-brands fa-youtube text-[35px] text-[#a271f1] s:text-[45px]"></i>
+          </div>
+        </div>
+        </div>
+        <div class="s:flex s:flex-row s:gap-8 2s:mx-[50px] xl:mr-[150px]">
+          <div>
+            <h4 class="text-[#300b60] text-[18px] uppercase font-bold py-[5px] xs:text-[24px]">Hostinq & Domen</h4>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Domen</p>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Veb Hostinq</p>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">VPS Hostinq</p>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Server</p>
+          </div>
+          <div>
+            <h4 class="text-[#300b60] text-[18px] uppercase font-bold py-[5px] xs:text-[24px]">Şirkət</h4>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Haqqımızda</p>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Əlaqə</p>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Bloq</p>
+            <p class="text-[18px] text-[#4a2182] font-medium hover:text-[#7d3be2] cursor-pointer py-[5px]">Portfolio</p>
+        </div>
+        </div>
+      </div>
+         <div class="2s:flex 2s:flex-row 2s:justify-between 2s: items-center 2s:border-t-[1px] 2s:border-[#e2e8f0]">
+        <div class="flex flex-col gap-1 border-t-[1px] border-[#e2e8f0] my-[16px] 2s:border-0">
+          <div class="flex flex-row items-center gap-2 p-[16px] pb-0">
+            <img class="" src="../icon/phone-call.svg" alt="" />
+            <p class="text-[#4a2182] font-light whitespace-nowrap">+(99470) 330-00-04</p>
+          </div>
+          <div class="flex flex-row items-center gap-2 px-[16px]">
+            <img class="" src="../icon/email.svg" alt="" />
+            <p class="text-[#4a2182] font-light">support@sayt.az</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 border-t-[1px] border-[#e2e8f0] my-[16px] 2s:border-0">
+            <p class="text-[#4a2182] font-light px-[16px]">&copy;Copyright 2004-2025 &copy;Sayt.az. Bütün Hüquqlar Qorunur.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed bottom-5 right-6">
+    <div class="relative">
+      <input type="checkbox" id="photo" class="toggle-checkbox" hidden>
+      <label for="photo" class="fa-solid fa-xmark text-[22px] absolute top-[-40px] right-[-15px]"></label>
+      <div class="weare w-[124px] h-[79px] absolute bottom-2 left-[-45px]">
+        <img class="" src="../icon/168-r-br.svg" alt="" />
+      </div>
+      <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[50%] bg-[#a271f1]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" height="32px" fill="white" width="32px" role="img" alt="Söhbət ikonu" aria-labelledby="openIconTitle openIconDesc" class="tawk-min-chat-icon">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M400 26.2c-193.3 0-350 156.7-350 350 0 136.2 77.9 254.3 191.5 312.1 15.4 8.1 31.4 15.1 48.1 20.8l-16.5 63.5c-2 7.8 5.4 14.7 13 12.1l229.8-77.6c14.6-5.3 28.8-11.6 42.4-18.7C672 630.6 750 512.5 750 376.2c0-193.3-156.7-350-350-350zm211.1 510.7c-10.8 26.5-41.9 77.2-121.5 77.2-79.9 0-110.9-51-121.6-77.4-2.8-6.8 5-13.4 13.8-11.8 76.2 13.7 147.7 13 215.3.3 8.9-1.8 16.8 4.8 14 11.7z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <script src="../js/header.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/calcHeader.js"></script>
+  <script src="../js/calculator.js"></script>
+  <script src="../js/komandaData.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="..js/slider.js"></script>
+</body>
+</html>
